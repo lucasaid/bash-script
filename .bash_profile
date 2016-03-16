@@ -295,22 +295,22 @@ httpDebug () {
 #   4.  SEARCHING
 #   ---------------------------
 
-alias qfind="find . -name "                 # qfind:    Quickly search for file
-ff () { /usr/bin/find . -name "$@" ; }      # ff:       Find file under the current directory
-ffs () { /usr/bin/find . -name "$@"'*' ; }  # ffs:      Find file whose name starts with a given string
-ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:      Find file whose name ends with a given string
-spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
+alias qfind="find . -name "                 			# qfind:    	Quickly search for file
+ff () { /usr/bin/find . -name "$@" ; }      			# ff:       	Find file under the current directory
+ffs () { /usr/bin/find . -name "$@"'*' ; }  			# ffs:      	Find file whose name starts with a given string
+ffe () { /usr/bin/find . -name '*'"$@" ; }  			# ffe:      	Find file whose name ends with a given string
+spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }		# spotlight: 	Display full path to file
 
 #   ---------------------------
 #   My Bash Stuff
 #   ---------------------------
 
-alias editbash='atom ~/.bash_profile' # Open this file in atom
-alias reload_profile=". ~/.bash_profile" # Reload the profile in current terminal window
+alias editbash='atom ~/.bash_profile' 			# Open this file in atom
+alias reload_profile=". ~/.bash_profile" 		# Reload the profile in current terminal window
 
 # Hosts stuff
-alias addhost=addHost                         # add host to host file
-alias edithost='sudo vim /private/etc/hosts'  # Open host file for editing in VIM
+alias addhost=addHost                         		# add host to host file
+alias edithost='sudo vim /private/etc/hosts'  		# Open host file for editing in VIM
 
 # Directories
 alias c="clear"                                         # Shortcut for clearing terminal
@@ -321,43 +321,43 @@ alias l='ls -la'                                        # Quick list all
 alias ls='ls -FGlAhp'                                   # Quick list without parents
 alias rmall="sudo rm -rf $1"                            # Remove all the things! Seriously bad times.
 
-alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
-alias ..='cd ../'                           # Go back 1 directory level
-alias ...='cd ../../'                       # Go back 2 directory levels
-alias .3='cd ../../../'                     # Go back 3 directory levels
-alias .4='cd ../../../../'                  # Go back 4 directory levels
-alias .5='cd ../../../../../'               # Go back 5 directory levels
-alias .6='cd ../../../../../../'            # Go back 6 directory levels
+alias cd..='cd ../'                         		# Go back 1 directory level (for fast typers)
+alias ..='cd ../'                           		# Go back 1 directory level
+alias ...='cd ../../'                       		# Go back 2 directory levels
+alias .3='cd ../../../'                     		# Go back 3 directory levels
+alias .4='cd ../../../../'                  		# Go back 4 directory levels
+alias .5='cd ../../../../../'               		# Go back 5 directory levels
+alias .6='cd ../../../../../../'            		# Go back 6 directory levels
 
-alias home="cd ~"                                               # Goto home directory
-alias f='open -a Finder ./'                                     # Open current directory in Finder
-alias numfiles='echo $(ls -1 | wc -l)'                          # Display number of files in directory
+alias home="cd ~"                                       # Goto home directory
+alias f='open -a Finder ./'                             # Open current directory in Finder
+alias numfiles='echo $(ls -1 | wc -l)'                  # Display number of files in directory
 
-# alias chownuser='sudo chown -R : ./'                          # Update ownership of directory (Need to update)
+# alias chownuser='sudo chown -R : ./'                  # Update ownership of directory (Need to update)
 
 # Confirmation
-alias mv='mv -i'                # Prompt overwite on moving files
-alias cp='cp -i'                # Prompt overwite on copying files
-alias ln='ln -i'                # Prompt overwite on symlinking files
+alias mv='mv -i'                			# Prompt overwite on moving files
+alias cp='cp -i'                			# Prompt overwite on copying files
+alias ln='ln -i'        				# Prompt overwite on symlinking files
 
 # Networking
-alias myip='curl ip.appspot.com; echo ""'     # Get my current IP
-alias localip='ipconfig getifaddr en0'        # Get my current IP on local network
+alias myip='curl ip.appspot.com; echo ""'     		# Get my current IP
+alias localip='ipconfig getifaddr en0'        		# Get my current IP on local network
 
 
 # Coding
-alias edit='atom ./'    # Open current directory in Atom
-alias a='atom'          # Open Atom
+alias edit='atom ./'    				# Open current directory in Atom
+alias a='atom'          				# Open Atom
 
 # Browsers
-alias firefox="open -a firefox"         # Open Firefox
-alias safari="open -a safari"           # Open Safari
-alias chrome="open -a google\ chrome"   # Open Chrome
-alias browser=chrome                    # Open Default browser (chrome)
+alias firefox="open -a firefox"         		# Open Firefox
+alias safari="open -a safari"           		# Open Safari
+alias chrome="open -a google\ chrome"   		# Open Chrome
+alias browser=chrome                    		# Open Default browser (chrome)
 
 # October
-alias par="php artisan plugin:refresh"  # Refresh Plugin in october CMS
-alias pa="php artisan"                  # Shortcut for php artisan
+alias par="php artisan plugin:refresh"  		# Refresh Plugin in october CMS
+alias pa="php artisan"                  		# Shortcut for php artisan
 
 #Git
 alias ss="git status -s"                                                                    # Display shorthand git status
@@ -382,11 +382,11 @@ alias glog="git log --oneline"                                                  
 alias injecthomestead="composer require laravel/homestead --dev && php vendor/bin/homestead make"
 
 # Vagrant Stuff
-alias vhalt="sudo vagrant halt"         # Halt Vagrant Box        
-alias vup="sudo vagrant up"             # Boot up Vagrant Box
-alias vdel="sudo vagrant destroy"       # Destroy Vagrant Box
-alias vm="sudo vagrant ssh"             # SSH into Vagrant Box
-alias vmstatus="vagrant global-status"  # View global status of vagrant, shows which boxes are running
+alias vhalt="sudo vagrant halt"         		# Halt Vagrant Box        
+alias vup="sudo vagrant up"             		# Boot up Vagrant Box
+alias vdel="sudo vagrant destroy"       		# Destroy Vagrant Box
+alias vm="sudo vagrant ssh"             		# SSH into Vagrant Box
+alias vmstatus="vagrant global-status"  		# View global status of vagrant, shows which boxes are running
 
 # Shutdown a virtual machine
 alias shutdown-vms="VBoxManage list vms | cut -f 1 -d ' ' | xargs -I NAME sh -c 'VBoxManage controlvm NAME poweroff ; VBoxManage unregistervm NAME' ; rm -rf ~/VirtualBox\ VMs/*"
